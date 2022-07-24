@@ -5,64 +5,91 @@ function startApp() {
 
   // pls remove the below and make some magic in here!
 
-  let inputElement = document.querySelector("#telephone");
-  inputElement.addEventListener("input", validateNumber)
 
-  let spanElement = document.querySelector(".image");
+};
+let inputElement = document.querySelector("#telephone");
+inputElement.addEventListener("input", validateNumber)
 
-  let btnElement = document.querySelector("#btn");
+let spanElement = document.querySelector(".image");
 
-  let form = document.querySelector("#formy");
+let btnElement = document.querySelector("#btn");
 
-  let mtn_logo = document.querySelector(".image > #mtn");
-
-  function validateNumber() {
-    let inputValue = inputElement.value
-
-    let zeroFirst = inputValue.slice(0, 1)
-    if (zeroFirst == 0) {
-      var sliced = Number(inputValue.slice(1, 4));
-    }
-    else {
-      sliced = Number(inputValue.slice(0, 3));
-    }
-
-    let string_length = inputValue.length;
-    
-    checkNetwork()
-    function checkNetwork() {
-      let MTN = [803, 806, 703, 706, 813, 816, 810, 814, 903, 906]
-      let airtel = [802, 808, 708, 812, 701, 902, 907, 901]
-      let GLO = [805, 807, 705, 815, 811, 905]
-      let _9mobile = [809, 818, 817, 909, 908]
+let form = document.querySelector("#formy");
 
 
-      if(MTN.includes(sliced) && string_length >= 11) {
-        
-      spanElement.innerHTML = "MTN"
-      }
-      else if(airtel.includes(sliced) && string_length >= 11) {
-      spanElement.innerHTML = "Airtel"
-      }
-      else if (GLO.includes(sliced) && string_length >= 11) {
-      spanElement.innerHTML = "GLO"
-      }
-      else if (_9mobile.includes(sliced) && string_length >= 11) {
-      spanElement.innerHTML = "9mobile"
-      }
-      else {
-      spanElement.innerHTML = "Unknown number"
-      }
-    }
+
+function validateNumber() {
+  let inputValue = inputElement.value
+  let string_length = inputValue.length;
+  let firstFourNum = inputValue.slice(0, 4)
+  let zeroFirst = inputValue.slice(0, 1)
+
+
+  if (zeroFirst == 0 && string_length == 11) {
+    var prefix = Number(inputValue.slice(1, 4));
+
+  }
+  else if (zeroFirst !== 0 && string_length == 10) {
+    prefix = Number(inputValue.slice(0, 3));
+  }
+  else if (firstFourNum == "+234" && string_length == 14) {
+    prefix = Number(inputValue.slice(4, 7));
   }
 
-  btnElement.addEventListener("click", () => {
-    form.reset();
-    spanElement.innerHTML = "";
-  })
-};
+  let MTN = [803, 806, 703, 706, 813, 816, 810, 814, 903, 906]
+  let airtel = [802, 808, 708, 812, 701, 704, 902, 904, 901]
+  let GLO = [805, 807, 705, 815, 811, 905]
+  let _9mobile = [809, 818, 817, 909, 908]
 
 
+  if (MTN.includes(prefix)) {
+    const img = document.createElement("img")
+    img.src = "mtn.png"
+    img.height = 40;
+    img.width = 40;
+    img.style.alignSelf = "center"
+    img.style.marginLeft = "20px";
+    spanElement.replaceChildren(img);
+  }
+  else if (airtel.includes(prefix)) {
+    const img = document.createElement("img")
+    img.src = "airtel.png"
+    img.height = 40;
+    img.width = 40;
+    img.style.alignSelf = "center"
+    img.style.marginLeft = "20px";
+    spanElement.replaceChildren(img);
+  }
+  else if (GLO.includes(prefix)) {
+    const img = document.createElement("img")
+    img.src = "glo.png"
+    img.height = 40;
+    img.width = 40;
+    img.style.alignSelf = "center"
+    img.style.marginLeft = "20px";
+    spanElement.replaceChildren(img);
+  }
+  else if (_9mobile.includes(prefix)) {
+    const img = document.createElement("img")
+    img.src = "9mobile.png"
+    img.height = 45;
+    img.width = 40;
+    img.style.alignSelf = "center"
+    img.style.marginLeft = "20px";
+    spanElement.replaceChildren(img);
+  }
+  else {
+    spanElement.innerHTML = "Unknown number"
+  }
+
+  let allNetwork = MTN.concat(airtel, GLO, _9mobile);
+  let sortedNetworks = allNetwork.sort();
+}
+
+btnElement.addEventListener("click", () => {
+  form.reset();
+  spanElement.innerHTML = "";
+})
 
 // ======= DO NOT EDIT ============== //
 export default startApp;

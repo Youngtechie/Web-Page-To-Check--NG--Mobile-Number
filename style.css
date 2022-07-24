@@ -75,9 +75,6 @@ h2{
 marquee{
   margin: 10px;
 }
-.image img{
-  display: none;
-}
 @keyframes inside{
    0%   {color:red; left:-300px; top:-300px;} 
   20%  {color:grey; left:-200px; top:-200px;}
