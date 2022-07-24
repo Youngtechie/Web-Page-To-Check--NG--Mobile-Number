@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name of chosen challenge</title>
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
 </head>
-<body>
-    
-    <h2>make some magic here!!</h2>
 
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
-    <script src="index.mjs" type="module"></script>
-    <!-- // ============= EEND DO NOT EDIT ============== // -->
+<body>
+  <main class="container">
+    <h2><span class="name">Abdul-Rahmon's </span><span class="title"> Phonie Solution </span></h2>
+    <p class="pra">Fill in your number to check which mobile network provider it belongs to &#128151</p>
+    <form id="formy" autocomplete="on">
+      <input type="tel" id="telephone" class="tel" name="tel" autocomplete="on" autofocus="off"
+        placeholder="Input your number" maxlength="11" />
+      <section class="image">
+        <img src="mtn.png" alt="MTN" id="mtn" width="40px" height="40px" />
+        <img src="airtel.png" alt="Airtel" id="airtel" width="" height="" />
+        <img src="glo.png" alt="Glo" id="glo" width="" height="" />
+        <img src="9mobile.pngg" alt="9mobile" id="_9mobile" width="" height="" />
+      </section>
+    </form>
+    <button type="button" class="submit_btn" id="btn">Reset this form</button>
+
+    <marquee>Abdul-Rahmon &copy; 2022 </marquee>
+  </main>
+
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
+  <script src="index.mjs" type="module"></script>
+  <!-- // ============= EEND DO NOT EDIT ============== // -->
 </body>
+
 </html>
