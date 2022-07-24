@@ -17,7 +17,6 @@ let btnElement = document.querySelector("#btn");
 let form = document.querySelector("#formy");
 
 
-
 function validateNumber() {
   let inputValue = inputElement.value
   let string_length = inputValue.length;
@@ -79,9 +78,8 @@ function validateNumber() {
     spanElement.replaceChildren(img);
   }
   else {
-    spanElement.innerHTML = "Unknown number"
+    spanElement.innerHTML = "Unknown number";
   }
-
   let allNetwork = MTN.concat(airtel, GLO, _9mobile);
   let sortedNetworks = allNetwork.sort();
 }

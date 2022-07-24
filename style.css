@@ -11,21 +11,22 @@ body{
   align-items: center;
   justify-content: center;
   background: linear-gradient(120deg, skyblue, red, yellow);
-  font-size: 16px;
+  font-size: 12px;
 }
 .container{
   background: linear-gradient(90deg, rgba(198,191,94,1) 50%, rgba(160,88,161,1) 100%);
   padding: 10px;
   display: flex;
   flex-flow: column wrap;
-  width: 350px;
+  width: 310px;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
 }
 h2{
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 900;
+  font-family: cursuive;
 }
 .name{
   animation: inside 5s linear 0s 3 alternate;
@@ -38,6 +39,7 @@ h2{
 .pra{
   text-align: center;
   margin-top: 10px;
+  font-size: 16px;
 }
 #formy{
   display: flex;
@@ -58,8 +60,7 @@ h2{
 }
 #formy .image{
   align-self: center;
-  width: 50%;
-  padding-left: 10px
+  width: 40%;
 }
 #btn{
   border-radius: 10px;
@@ -69,17 +70,21 @@ h2{
   font-weight: 700;
   outline: none;
   border: 1px solid #fff;
+  font-size: 16px;
 }
 #btn:hover{
   cursor: pointer;
 }
-
+.images {
+  font-size: 12px;
+}
 marquee{
-  margin: 10px;
+  margin: 20px;
+  font-size: 16px;
 }
 @keyframes inside{
-   0%   {color:red; left:-200px; top:-200px;} 
-  20%  {color:grey; left:-150px; top:-150px;}
+   0%   {color:red; left: 0px; top:-50px;} 
+  20%  {color:grey; left:-100px; top:-100px;}
   40%  {color: purple; left:-100px; top:-100px;}
   60%  {color: blue; left:-50px; top:-50px;}
   80%  {color: green; left:0px; top:-50px;}
@@ -87,8 +92,8 @@ marquee{
 }
 
 @keyframes inside2{
-   0%   {color:red; right:-200px; top:-200px;}
-  20%  {color:grey; right:-150px; top:-150px;}
+   0%   {color:red; right: 0px; top:-50px;}
+  20%  {color:grey; right:-100px; top:-100px;}
   40%  {color: purple; right:-100px; top:-100px;}
   60%  {color: blue; right:-50px; top:-50px;}
   80%  {color: green; right:0px; top:-50px;}
