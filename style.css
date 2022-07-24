@@ -18,7 +18,7 @@ body{
   padding: 10px;
   display: flex;
   flex-flow: column wrap;
-  width: 300px;
+  width: 350px;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
@@ -67,6 +67,8 @@ h2{
   background-color: #adadad;
   color: #fff;
   font-weight: 700;
+  outline: none;
+  border: 1px solid #fff;
 }
 #btn:hover{
   cursor: pointer;
@@ -76,8 +78,8 @@ marquee{
   margin: 10px;
 }
 @keyframes inside{
-   0%   {color:red; left:-300px; top:-300px;} 
-  20%  {color:grey; left:-200px; top:-200px;}
+   0%   {color:red; left:-200px; top:-200px;} 
+  20%  {color:grey; left:-150px; top:-150px;}
   40%  {color: purple; left:-100px; top:-100px;}
   60%  {color: blue; left:-50px; top:-50px;}
   80%  {color: green; left:0px; top:-50px;}
@@ -85,8 +87,8 @@ marquee{
 }
 
 @keyframes inside2{
-   0%   {color:red; right:-300px; top:-300px;}
-  20%  {color:grey; right:-200px; top:-200px;}
+   0%   {color:red; right:-200px; top:-200px;}
+  20%  {color:grey; right:-150px; top:-150px;}
   40%  {color: purple; right:-100px; top:-100px;}
   60%  {color: blue; right:-50px; top:-50px;}
   80%  {color: green; right:0px; top:-50px;}
