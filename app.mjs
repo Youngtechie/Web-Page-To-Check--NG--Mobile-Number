@@ -46,7 +46,6 @@ function startApp() {
         img.height = 40;
         img.width = 40;
         img.style.alignSelf = "center"
-        img.style.marginLeft = "20px";
         spanElement.replaceChildren(img);
       }
       else if (airtel.includes(prefix)) {
@@ -55,7 +54,6 @@ function startApp() {
         img.height = 40;
         img.width = 40;
         img.style.alignSelf = "center"
-        img.style.marginLeft = "20px";
         spanElement.replaceChildren(img);
       }
       else if (GLO.includes(prefix)) {
@@ -64,7 +62,6 @@ function startApp() {
         img.height = 40;
         img.width = 40;
         img.style.alignSelf = "center"
-        img.style.marginLeft = "20px";
         spanElement.replaceChildren(img);
       }
       else if (_9mobile.includes(prefix)) {
@@ -73,7 +70,6 @@ function startApp() {
         img.height = 45;
         img.width = 40;
         img.style.alignSelf = "center"
-        img.style.marginLeft = "20px";
         spanElement.replaceChildren(img);
       }
       else {
